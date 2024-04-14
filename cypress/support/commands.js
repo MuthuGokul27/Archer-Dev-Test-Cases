@@ -35,7 +35,7 @@ Cypress.Commands.add("loginToApplication", (email,password) =>{
     cy.get('#next-button').click()
     cy.get('[id="password"]').type(password)
     cy.get('[id="next-button"]').click()
-    cy.visit("https://beta-app-feature.archerpage.com/")
+    //cy.visit("https://beta-app-feature.archerpage.com/")
   })
 
 

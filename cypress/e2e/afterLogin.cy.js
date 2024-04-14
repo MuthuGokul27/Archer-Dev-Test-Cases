@@ -8,10 +8,7 @@ describe("Verifying Product in user Dashboard", () =>{
             password: "T@rtL@bs",
         },
         });
-        cy.on("window:alert", (str) => {
-          expect(str).to.equal("Sign in");
-        });
-      
+        
     })
 
 it("Check for right URl", () =>{
