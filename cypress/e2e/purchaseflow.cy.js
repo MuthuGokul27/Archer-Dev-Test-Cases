@@ -19,8 +19,15 @@ describe("Purchas Flow", () =>{
         })
       }).as("activated")
 
+      cy.intercept("POST", "https://api.archerpage.com/api/v1/checkout", (req) =>{
+        req.reply((res) =>{
+            res.body.is_email_verified = True;
+            return res;
+        })
+      })
 
-        cy.signUpToApplication("Gokul", "Cypress", "gokulcypress25@mailinator.com", "password")
+
+        cy.signUpToApplication("Gokul", "Cypress", "gokulcypress28@mailinator.com", "password")
        //cy.wait("@activated").then((interception) => {
         //expect(interception.response.body.isActivate).to.equal("1")
 
