@@ -26,17 +26,14 @@
 
   
 Cypress.Commands.add("loginToApplication", (email,password) =>{
+
+
     cy.get('#reset-button').click()
-    //cy.get('[id="login"]').click();
     cy.get('[id="email"]').type(email)
     cy.get('#next-button').click()
-    //cy.get('[id="get-product"]').click()
-    //cy.get('[id="email"]').type(email)
-    //cy.get('#next-button').click()
-    //cy.wait(6000)
     cy.get('[id="password"]').type(password)
     cy.get('[id="next-button"]').click()
-    //cy.visit("https://beta-app-feature.archerpage.com/")
+    
   })
 
 

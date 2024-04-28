@@ -22,6 +22,11 @@ describe("Login Validation", () => {
         login.setUserName("muthugokul027@@gmail.com")
         cy.get('[class="pl-2"]').should("contain", "Enter a valid email")
         cy.get('[id="email"]').clear()
+        //Vlidating When a Educator Trying to login in archerreview
+        login.setUserName("davidmalanstanford@mailinator.com")
+        cy.get('[id="get-product"]').should("contain", "Go to Educator Login")
+        cy.get('svg[width="18"][height="18"][color="#687687"]').eq(0).click()
+        cy.get('[id="email"]').clear()
         //Validating When We Enter correct Email Address, It Takes Me to Password Page
         login.setUserName("muthugokul027@gmail.com")
         //Validating Wrong Password
