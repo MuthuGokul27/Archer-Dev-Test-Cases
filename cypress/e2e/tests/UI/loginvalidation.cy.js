@@ -1,4 +1,4 @@
-import Login from "../pageobjects/loginpage"
+import Login from "../../../pageobjects/loginpage"
 
 describe("Login Validation", () => {
    const auth = {

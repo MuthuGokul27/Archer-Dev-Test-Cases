@@ -7,6 +7,7 @@ module.exports = defineConfig({
     
   env: {
     afterLoginUrl : "https://beta-app-feature.archerpage.com",
+    specPattern: "src/**/*.cy.{js,jsx,ts,tsx}"
   },
   
   e2e: {
