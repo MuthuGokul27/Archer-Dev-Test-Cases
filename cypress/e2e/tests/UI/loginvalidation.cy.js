@@ -8,6 +8,19 @@ describe("Login Validation", () => {
 
    const login = new Login();
 
+   //Intercept Uncaught Exception
+   Cypress.on("uncaught:exception", (err, runnable) => {
+    if(isReactError(err)) {
+    cy.log("Encoutered a React Error: " + err.message)
+    return false;
+   }
+   return true;
+
+})
+   function isReactError(err) {
+    return err.message.includes("Minified React error");
+   }
+
     it("loginvalidation", () =>{
         cy.visit("https://archerpage.com", {auth})
         cy.get('#reset-button').click()

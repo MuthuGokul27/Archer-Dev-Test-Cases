@@ -10,7 +10,7 @@ describe("Verifying Signup Validation", function(){
 
        let firstName = "James"
        let lastName = "Clear"
-       let email = "jamesclear08@mailinator.com"
+       let email = "jamesclear09@mailinator.com"
        let password = "password"
 
 
