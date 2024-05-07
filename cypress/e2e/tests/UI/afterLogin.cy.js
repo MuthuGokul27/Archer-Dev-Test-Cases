@@ -14,8 +14,7 @@ describe("Verifying Product in user Dashboard", () =>{
             req.reply((res) =>{
                 res.body.user.has_user_bought_product = 0;
                 return res;
-                //console.log(req)
-
+        
             })
 
         })
