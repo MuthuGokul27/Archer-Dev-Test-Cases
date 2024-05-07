@@ -21,7 +21,7 @@ describe("Purchase Flow", () =>{
 
   it("Loging in and Purchasing Surepass Product", () =>{
 
-    //Intersepting API Call and Restricting Takeing User to React Js
+    //Intersepting API Call and Restricting Takeing  to React Js
     cy.intercept("GET", "https://api.archerpage.com/api/v1/my-profile", (req)=>{
             req.reply((res) =>{
                 res.body.user.has_user_bought_product = 0;
